@@ -11,7 +11,6 @@
   />
   <script src="https://unpkg.com/sweetalert2@9/dist/sweetalert2.all.js"></script>
   <link rel="stylesheet" href="./css/main.css" />
-  <link rel="stylesheet" href="./css/darkmode.css" />
   <title>CPaaS - Perfil</title>
 </head>
 <body>
@@ -22,11 +21,6 @@
         <a href="index.html" class="list-group-item list-group-item-action">Início</a>
         <a href="profile.html" class="list-group-item list-group-item-action">Perfil</a>
         <a href="#" onclick="logout()" class="list-group-item list-group-item-action">Sair</a>
-      </nav>
-      <div class="form-group text-center mt-3">
-        <button id="theme-toggle" class="btn btn-dark" onclick="toggleTheme()">Alternar Tema</button>
-
-    </div>
       </nav>
     </div>
     <div id="page-content">
@@ -128,7 +122,7 @@
               </div>
               <div class="form-group">
                 <label for="address">Endereço Completo:</label>
-                <input type="text" id="address" name="address"class="form-control" required>
+                <input type="text" id="address" name="address"class="form-control" autocomplete="address" required>
               </div>
               <div class="form-group">
                 <label for="house-number">Número da Casa:</label>
