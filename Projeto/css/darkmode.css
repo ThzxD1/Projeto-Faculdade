@@ -6,9 +6,14 @@ body {
 
 /* Tema Escuro */
 body.dark-theme {
-  background-image: linear-gradient(45deg, #3694ec, #114883);
+  background-image: linear-gradient(45deg, #052b52, #3694ec);
   color: #ffffff;
 }
+#navb.dark-mode  {
+  background-color: #052b52;
+  color: #fff;
+}
+
 #sidebar.dark-theme{
   background-color: #052b52;
 }
