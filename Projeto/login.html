@@ -1,122 +1,95 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Página de Login</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
-  <style>
-    /* Estilos para centralizar a div na tela */
-    html, body {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .login-container {
-      width: 300px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="login-container">
-    <h2>Login</h2>
-    <form id="login-form">
-      <div class="form-group">
-        <label for="login">Login:</label>
-        <input type="text" id="login" name="login" required>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/sweetalert2@9/dist/sweetalert2.all.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Lista de Tarefas | Autenticação</title>
+  </head>
+  <body class="bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-10 offset-1 text-center mt-5 pb-4 text-primary">
+          <h1 class="h1">Autenticação</h1>
+        </div>
+        <div class="col-10 offset-1 bg-white shadow mb-5 border border-primary">
+          <div class="row">
+            <div
+              id="loginLogo"
+              class="col-6 p-4  d-flex justify-content-center"
+            >
+              <img src="./images/a.png" alt="Logo CPaaS" />
+            </div>
+            <div class="col-6 p-5">
+              <div id="loginForm">
+                <h2 class="h2 text-center text-dark mb-3">Acesso</h2>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Senha</label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="form-control"
+                  />
+                </div class="form-group">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  onclick="login()"
+                >
+                  Login
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  onclick="registrar()"
+                >
+                  Cadastrar-se
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <div class="form-actions">
-        <button type="submit">Entrar</button>
-      </div>
-    </form>
-  </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
-  <script src="js/firebase.js"></script>
-  <script src="js/login.js"></script>
-  <script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyD9nbJCYpUT_mELezEvOtxfi7_wUppSaww",
-        authDomain: "projeto-th-c0b8e.firebaseapp.com",
-        projectId: "projeto-th-c0b8e",
-        storageBucket: "projeto-th-c0b8e.appspot.com",
-        databaseURL: "https://projeto-th-c0b8e-default-rtdb.firebaseio.com",
-        messagingSenderId: "669797388911",
-        appId: "1:669797388911:web:0297366b62a87a1e82b39a",
-        measurementId: "G-JNT57720J3"
-    };
+    </div>
 
-    firebase.initializeApp(firebaseConfig);
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
 
-    // Referência para o formulário de login
-    var loginForm = document.getElementById('login-form');
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
 
-    // Manipulador de envio do formulário
-    loginForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // Impede o envio do formulário
-      
-      // Obter valor do campo de login
-      var loginValue = loginForm.login.value;
-
-      // Consultar o banco de dados para verificar se o login existe
-      firebase.database().ref('users').orderByChild('login').equalTo(loginValue).once('value')
-        .then(function(snapshot) {
-          if (snapshot.exists()) {
-            // Login encontrado, continuar com a autenticação
-            var userKey = Object.keys(snapshot.val())[0];
-            var user = snapshot.val()[userKey];
-            var passwordValue = loginForm.password.value;
-
-            firebase.auth().signInWithEmailAndPassword(user.email, passwordValue)
-              .then(function(userCredential) {
-                // Sucesso no login
-                var user = userCredential.user;
-                console.log('Usuário autenticado:', user);
-                Swal.fire({
-                  icon: 'success',
-                  title: 'Login realizado com sucesso!',
-                  text: 'Bem-vindo(a)!',
-                }).then(function() {
-                  // Redirecionar para a página principal ou realizar outras ações necessárias
-                });
-              })
-              .catch(function(error) {
-                // Tratar erros de autenticação
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                console.error('Erro de autenticação:', errorCode, errorMessage);
-                Swal.fire({
-                  icon: 'error',
-                  title: 'Erro de autenticação',
-                  text: 'Usuário ou senha inválidos.',
-                });
-              });
-          } else {
-            // Login não encontrado
-            Swal.fire({
-              icon: 'error',
-              title: 'Erro de autenticação',
-              text: 'Usuário não encontrado.',
-            });
-          }
-        })
-        .catch(function(error) {
-          console.error('Erro ao consultar o banco de dados:', error);
-        });
-    });
-  </script>
-</body>
+    <script src="./js/init.js"></script>
+    <script src="./js/auth.js"></script>
+  </body>
 </html>

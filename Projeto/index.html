@@ -1,12 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"
+  />
+  <script src="https://unpkg.com/sweetalert2@9/dist/sweetalert2.all.js"></script>
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <style>
+    #scrollToTopArrow {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: #333;
+      background-image: url("https://static.thenounproject.com/png/12937-200.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1;
+    }
+  </style>
+
+  <title>CPaaS - Site Oficial</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+  <div id="page" class="d-flex">
+    <div id="sidebar" class="bg-light border-right">
+      <header>CPaaS</header>
+      <nav class="list-group list-group-flush">
+        <a
+          href="index.html"
+          class="list-group-item list-group-item-action bg-light"
+          >Dashboard</a
+        >
+        <a
+          href="profile.html"
+          class="list-group-item list-group-item-action bg-light"
+          >Perfil</a
+        >
+        <a
+          href="login.html"
+          onclick="logout()"
+          class="list-group-item list-group-item-action bg-light"
+          >Sair</a
+        >
+      </nav>
+    </div>
+    <div id="page-content">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+      >
+        <button id="sidebar-toggle" class="btn btn-primary">Menu</button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto mt-2">
+            <li class="nav-item active">
+              <a href="index.html" class="nav-link">Início</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                id="navbarDropdown"
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Meu Usuário</a
+              >
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="navbarDropdown"
+              >
+                <a href="profile.html" class="dropdown-item">Perfil</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item" onclick="logout()">Sair</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4"><img src="/images/a.png"></h1>
+        <div class="row">
+          <section>
+            <h2>CPaaS: O que é?</h2>
+            <h3 id="section1link1">Communications Platform as a Service</h3>
+              <h4>Plataforma de Comunicação como Serviço</h4>
+              <p>É uma solução de software de comunicação que atua
+                como uma base sobre a qual desenvolvedores podem
+                integrar uma variedade de aplicativos.
+                Métodos de comunicação típicos, como voz, chamadas
+                de vídeo ou mensagens de texto SMS, podem ser
+                incorporados em outros sistemas por meio de APIs que
+                se conectam à plataforma CPaaS.
+                Essas APIs permitem que as empresas expandam suas
+                ofertas sem a necessidade de hardware ou software
+                adicional.
+                Communications</p>
+            <ul>
+              <li>
+                <a href="#section1link1">Link 1</a>
+              </li>
+              <li>
+                <a href="#section1link2">Link 2</a>
+              </li>
+              <li>
+                <a href="#section1link3">Link 3</a>
+              </li>
+              <li>
+                <a href="#section1link4">Link 4</a>
+              </li>
+              <li>
+                <a href="#section1link5">Link 5</a>
+              </li>
+              <li>
+                <a href="#section1link6">Link 6</a>
+              </li>
+            </ul>
+            <section id="section1">
+              <h3 id="section1link1">Usos</h3>
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="card">
+                    <img src="images/Log.png" class="card-img-top" alt="Imagem 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Título do Card 1</h5>
+                      <p class="card-text">Texto do Card 1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="card">
+                    <img src="images/Varejo.png" class="card-img-top" alt="Imagem 2">
+                    <div class="card-body">
+                      <h5 class="card-title">Título do Card 2</h5>
+                      <p class="card-text">Texto do Card 2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="card">
+                    <img src="images/Call.png" class="card-img-top" alt="Imagem 3">
+                    <div class="card-body">
+                      <h5 class="card-title">Título do Card 3</h5>
+                      <p class="card-text">Texto do Card 3</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="card">
+                    <img src="images/saude.png" class="card-img-top" alt="Imagem 4">
+                    <div class="card-body">
+                      <h5 class="card-title">Título do Card 4</h5>
+                      <p class="card-text">Texto do Card 4</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="section2">
+              <h3 id="section1link2">Link 2</h3>
+              <p></p>
+            </section>
+            <section id="section3">
+              <h3 id="section1link3">Link 3</h3>
+              <p></p>
+            </section>
+            <section id="section4">
+              <h3 id="section1link4">Link 4</h3>
+              <p></p>
+            </section>
+            <section id="section5">
+              <h3 id="section1link5">Link 5</h3>
+              <p>Informações sobre o CPaaS - Link 5</p>
+            </section>
+            <section id="section6">
+              <h3 id="section1link6">Link 6</h3>
+              <p>Informações sobre o CPaaS - Link 6</p>
+            </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="scrollToTopArrow"></div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+  <script src="./js/init.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/index.js"></script>
+  <script>
+    $("#sidebar-toggle").click(function (e) {
+      e.preventDefault();
+      $("#page").toggleClass("toggled");
+    });
+
+    window.addEventListener('scroll', function () {
+      var scrollToTopArrow = document.getElementById('scrollToTopArrow');
+      if (window.scrollY > 300) {
+        scrollToTopArrow.style.display = 'block';
+      } else {
+        scrollToTopArrow.style.display = 'none';
+      }
+    });
+
+    document.getElementById('scrollToTopArrow').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
