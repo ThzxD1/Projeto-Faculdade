@@ -2,6 +2,7 @@
 
 body {
   font-family: Nunito, sans-serif;
+  
 }
 
 #page {
@@ -11,6 +12,7 @@ body {
 #page.toggled #sidebar {
   margin-left: -15rem;
 }
+
 
 #sidebar {
   min-height: 100vh;
@@ -48,4 +50,21 @@ section .card{
 .form-group .error-message {
   color: red;
   margin-top: 5px;
+}
+#scrollToTopArrow {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  background-image: url("https://static.thenounproject.com/png/12937-200.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  
 }

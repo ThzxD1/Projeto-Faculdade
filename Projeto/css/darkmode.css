@@ -1,0 +1,22 @@
+/* Tema Claro */
+body{
+    background-color: #f8f9fa;
+    color: #000000;
+  }
+
+  /* Tema Escuro */
+  body.dark-theme{
+    background-color: #343a40;
+    color: #ffffff;
+  }
+
+  /* Botão de alternar tema */
+  #theme-toggle {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  #theme-toggle.dark-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
