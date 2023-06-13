@@ -123,3 +123,20 @@ function saveProfile() {
 window.onload = function () {
   getUser()
 }
+function fillAddress() {
+  const cep = document.getElementById('cep').value;
+
+  // Faz a consulta na API ViaCEP
+  axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+    .then(response => {
+      const data = response.data;
+      const address = `${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`;
+      document.getElementById('address').value = address;
+    })
+    .catch(error => {
+      console.error('Erro ao consultar o CEP:', error);
+    });
+}
+
+// Adiciona um listener ao campo de CEP para chamar a função fillAddress quando houver mudanças
+document.getElementById('cep').addEventListener('change', fillAddress);

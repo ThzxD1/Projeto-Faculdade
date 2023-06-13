@@ -18,20 +18,7 @@ $(document).ready(function() {
         hideError('name');
       }
     }
-    function fetchAddressByCep(cep) {
-      var url = 'https://viacep.com.br/ws/' + cep + '/json/';
-      $.getJSON(url, function(data) {
-        if (!data.erro) {
-          fillAddressFields(data);
-        }
-      });
-    }
-    $('#cep').blur(function() {
-      var cep = $(this).val();
-      if (cep.length === 9) {
-        fetchAddressByCep(cep);
-      }
-    });
+    
     // Função para validar a data de nascimento
     function validateBirthdate() {
       var birthdate = $('#birth-date').val();
