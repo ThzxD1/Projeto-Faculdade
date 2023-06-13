@@ -45,3 +45,7 @@ section ul{
 section .card{
   border: none;
 }
+.form-group .error-message {
+  color: red;
+  margin-top: 5px;
+}
