@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
-
+html,
 body {
   font-family: Nunito, sans-serif;
-  
+  scroll-behavior: smooth;
 }
 
 #page {
@@ -35,6 +35,11 @@ body {
   font-size: 1.2rem;
 }
 
+#navbar {
+  position: fixed;
+  width: 100%;
+  transition: top 0.3s;
+}
 #page-content {
   min-width: 0;
   width: 100%;
@@ -81,4 +86,5 @@ section .card{
 #section1link5:target {
   margin-top: 10%;
   padding-top: 1px;
+
 }

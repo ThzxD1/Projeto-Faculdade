@@ -26,3 +26,4 @@ function getUser() {
 window.onload = function () {
   getUser()
 }
+

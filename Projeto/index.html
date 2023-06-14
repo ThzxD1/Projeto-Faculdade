@@ -41,7 +41,7 @@
       </nav>
     </div>
     <div id="page-content">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <button id="sidebar-toggle" class="btn btn-primary">Menu</button>
         <button
           class="navbar-toggler"
@@ -175,7 +175,7 @@
                   <p class="text-center p-4">2FA</p>
                 </div>
                 <div class="col-md-3 pt-3">
-                <a><img class="img-size pt-2" src="./images/smartphone.png" alt="Número Máscara"></a>
+                <a href="#section1link5"><img class="img-size pt-2" src="./images/smartphone.png" alt="Número Máscara"></a>
                   <p class="text-center p-2">Número Máscara</p>
                 </div>
                 <div class="col-md-3 pt-3">
@@ -414,6 +414,35 @@
     document.getElementById('scrollToTopArrow').addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  function scrollToSection(sectionId) {
+    const navbarHeight = document.querySelector('.navbar').offsetHeight; // Altura da navbar
+    const section = document.getElementById(sectionId); // Obter a seção pelo ID
+    const sectionOffset = section.offsetTop - navbarHeight; // Levar em consideração a altura da navbar
+    window.scrollTo({
+      top: sectionOffset,
+      behavior: 'smooth' // Rolar suavemente
+    });
+  }
+
+  // Evento de clique nos links da seção
+  const sectionLinks = document.querySelectorAll('ul li a');
+  sectionLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Impedir o comportamento padrão do link
+      const sectionId = link.getAttribute('href').slice(1); // Obter o ID da seção do atributo href
+      scrollToSection(sectionId); // Chamar a função de rolagem
+    });
+  });
   </script>
   
 </body>
