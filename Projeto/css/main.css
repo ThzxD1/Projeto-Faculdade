@@ -13,7 +13,13 @@ body {
   margin-left: -15rem;
 }
 
-
+.img-size {
+  width: 90px;
+  height: 90px;
+}
+.column-spacing {
+  margin-right: 1px;
+}
 #sidebar {
   min-height: 100vh;
   margin-left: 0;
@@ -67,4 +73,12 @@ section .card{
   cursor: pointer;
   z-index: 1;
   
+}
+#section1link1:target,
+#section1link2:target,
+#section1link3:target,
+#section1link4:target,
+#section1link5:target {
+  margin-top: 10%;
+  padding-top: 1px;
 }

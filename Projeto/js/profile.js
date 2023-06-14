@@ -32,8 +32,10 @@ async function getUserInfo(uid) {
   } else {
     userInfo.innerHTML = "Perfil registrado";
     const userData = logUsers.data();
+    let userLabel = document.getElementById("navbarDropdown")
     document.getElementById("name").value = userData.name || "";
     document.getElementById("email").value = userData.email || "";
+    document.getElementById("login").value = userData.login || "";
     document.getElementById("birth-date").value = userData.birthDate || "";
     document.getElementById("cpf").value = userData.cpf || "";
     document.getElementById("gender").value = userData.gender || "";
@@ -43,6 +45,7 @@ async function getUserInfo(uid) {
     document.getElementById("cep").value = userData.cep || "";
     document.getElementById("address").value = userData.address || "";
     document.getElementById("house-number").value = userData.houseNumber || "";
+    userLabel.innerHTML = userData.name
   }
 }
 
@@ -51,6 +54,7 @@ function saveProfile() {
   // Recuperar os valores dos campos do formulário
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
+  var login = document.getElementById('login').value;
   var birthDate = document.getElementById('birth-date').value;
   var cpf = document.getElementById('cpf').value;
   var gender = document.getElementById('gender').value;
@@ -65,6 +69,7 @@ function saveProfile() {
   if (
     name === '' ||
     email === '' ||
+    login === '' ||
     birthDate === '' ||
     cpf === '' ||
     gender === '' ||
@@ -90,6 +95,7 @@ function saveProfile() {
   var userData = {
     name: name,
     email: email,
+    login: login,
     birthDate: birthDate,
     cpf: cpf,
     gender: gender,

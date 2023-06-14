@@ -109,23 +109,14 @@ $(document).ready(function() {
         hideError('confirm-password');
       }
     }
-  
-    // Função para preencher os campos de endereço
-    function fillAddressFields(data) {
-      $('#address').val(data.logradouro);
-      $('#neighborhood').val(data.bairro);
-      $('#city').val(data.localidade);
-      $('#state').val(data.uf);
-    }
-  
-    // Função para obter o endereço a partir do CEP
-    function fetchAddressByCep(cep) {
-      var url = 'https://viacep.com.br/ws/' + cep + '/json/';
-      $.getJSON(url, function(data) {
-        if (!data.erro) {
-          fillAddressFields(data);
-        }
-      });
+     // Função para validar o login
+    function validateLogin() {
+      var login = $('#login').val();
+      if (!/^[a-zA-Z]{6}$/.test(login)) {
+        showError('login', 'O login deve ter exatamente 6 letras alfabéticas.');
+      } else {
+        hideError('login');
+      }
     }
   
     // Função para validar o formulário
@@ -138,8 +129,10 @@ $(document).ready(function() {
       validateCellphone();
       validatePhone();
       validateAddress();
+      validateLogin();
       validatePassword();
       validateConfirmPassword();
+  
   
       // Verifica se há algum campo com erro
       if ($('.error-message').text() === '') {
@@ -196,6 +189,7 @@ $(document).ready(function() {
     $('#cellphone').blur(validateCellphone);
     $('#phone').blur(validatePhone);
     $('#address').blur(validateAddress);
+    $('#login').blur(validateLogin);
     $('#password').blur(validatePassword);
     $('#confirm-password').blur(validateConfirmPassword);
   

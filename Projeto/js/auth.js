@@ -39,12 +39,12 @@ function login() {
             .fire({
               icon: "warning",
               title: "Usuário não encontrado",
-              text: "Deseja criar esse usuário?",
-              showCancelButton: true,
-              cancelButtonText: "Não",
-              cancelButtonColor: "#d33",
-              confirmButtonText: "Sim",
-              confirmButtonColor: "#3085d6",
+              text: "Você está sendo redirecionando para a tela de cadastro!",
+
+            }).then(() => {
+              setTimeout(() => {
+                window.location.replace("cadastro.html")
+              }, 1000)
             })
             .then((result) => {
               if (result.value) {

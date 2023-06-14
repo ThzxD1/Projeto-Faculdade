@@ -1,11 +1,12 @@
 function registerUser() {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
+    var login = document.getElementById('login').value;
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirm-password").value;
 
     // Verificar se todos os campos foram preenchidos
-    if (!name || !email || !password || !confirmPassword) {
+    if (!name || !login || !email || !password || !confirmPassword) {
       swal.fire({
         icon: "error",
         title: "Oops...",
@@ -34,6 +35,7 @@ function registerUser() {
         firebase.firestore().collection("users").doc(user.uid).set({
           name: name,
           email: email,
+          login: login,
         })
         .then(() => {
           swal.fire({
