@@ -415,34 +415,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
     var prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementById("navbar").style.top = "0";
-    } else {
-      document.getElementById("navbar").style.top = "-50px";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-  function scrollToSection(sectionId) {
-    const navbarHeight = document.querySelector('.navbar').offsetHeight; // Altura da navbar
-    const section = document.getElementById(sectionId); // Obter a seção pelo ID
-    const sectionOffset = section.offsetTop - navbarHeight; // Levar em consideração a altura da navbar
-    window.scrollTo({
-      top: sectionOffset,
-      behavior: 'smooth' // Rolar suavemente
-    });
-  }
-
-  // Evento de clique nos links da seção
-  const sectionLinks = document.querySelectorAll('ul li a');
-  sectionLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault(); // Impedir o comportamento padrão do link
-      const sectionId = link.getAttribute('href').slice(1); // Obter o ID da seção do atributo href
-      scrollToSection(sectionId); // Chamar a função de rolagem
-    });
-  });
   </script>
   
 </body>

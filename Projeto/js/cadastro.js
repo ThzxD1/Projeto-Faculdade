@@ -4,9 +4,18 @@ function registerUser() {
     var login = document.getElementById('login').value;
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirm-password").value;
+    var birthDate = document.getElementById('birth-date').value;
+    var cpf = document.getElementById('cpf').value;
+    var gender = document.getElementById('gender').value;
+    var motherName = document.getElementById('mother-name').value;
+    var cellphone = document.getElementById('cellphone').value;
+    var phone = document.getElementById('phone').value;
+    var cep = document.getElementById('cep').value;
+    var address = document.getElementById('address').value;
+    var houseNumber = document.getElementById('house-number').value;
 
     // Verificar se todos os campos foram preenchidos
-    if (!name || !login || !email || !password || !confirmPassword) {
+    if (!name || !login || !email || !password || !confirmPassword || !birthDate || !cpf || !gender || !motherName || !cellphone || !phone || !cep || !address || !houseNumber) {
       swal.fire({
         icon: "error",
         title: "Oops...",
@@ -36,6 +45,15 @@ function registerUser() {
           name: name,
           email: email,
           login: login,
+          birthDate: birthDate,
+          cpf: cpf,
+          gender: gender,
+          motherName: motherName,
+          cellphone: cellphone,
+          phone: phone,
+          cep: cep,
+          address: address,
+          houseNumber: houseNumber
         })
         .then(() => {
           swal.fire({

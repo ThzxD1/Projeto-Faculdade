@@ -178,8 +178,23 @@ $(document).ready(function() {
     $('#cpf').mask('000.000.000-00');
     $('#cellphone').mask('(+55)00 00000-0000');
     $('#phone').mask('(+55)00 0000-0000');
-    $('#cep').mask('99999-999');
-  
+    $('#cep').mask('00000-000');
+    
+    function fillAddress() {
+      const cep = document.getElementById('cep').value;
+    
+      // Faz a consulta na API ViaCEP
+      axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => {
+          const data = response.data;
+          const address = `${data.logradouro}, ${data.bairro}, ${data.uf}`;
+          document.getElementById('address').value = address;
+        })
+        .catch(error => {
+          console.error('Erro ao consultar o CEP:', error);
+        });
+    }
+    document.getElementById('cep').addEventListener('change', fillAddress);
     // Validação ao sair do campo
     $('#name').blur(validateName);
     $('#birth-date').blur(validateBirthdate);
