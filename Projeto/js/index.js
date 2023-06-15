@@ -27,3 +27,26 @@ window.onload = function () {
   getUser()
 }
 
+var currentFontSize = 0;
+
+function increaseFontSize() {
+  currentFontSize++;
+  updateFontSize();
+}
+
+function decreaseFontSize() {
+  currentFontSize--;
+  updateFontSize();
+}
+
+function updateFontSize() {
+  var fontClasses = ['font-size-small', 'font-size-normal', 'font-size-large', 'font-size-xlarge', 'font-size-xxlarge'];
+
+  if (currentFontSize < 0) {
+    currentFontSize = 0;
+  } else if (currentFontSize >= fontClasses.length) {
+    currentFontSize = fontClasses.length - 1;
+  }
+
+  document.body.className = fontClasses[currentFontSize];
+}

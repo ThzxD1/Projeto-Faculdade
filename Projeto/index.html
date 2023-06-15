@@ -10,6 +10,7 @@
     crossorigin="anonymous"
   />
   <script src="https://unpkg.com/sweetalert2@9/dist/sweetalert2.all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="stylesheet" href="./css/darkmode.css" />
   <title>CPaaS - Site Oficial</title>
@@ -21,23 +22,25 @@
       <nav id="navb" class="list-group list-group-flush">
         <a
           href="index.html"
-          class="list-group-item list-group-item-action "
+          class="list-group-item list-group-item-action text-primary"
           >Início</a
         >
         <a
           href="profile.html"
-          class="list-group-item list-group-item-action "
+          class="list-group-item list-group-item-action text-primary"
           >Perfil</a
         >
         <a
           href="login.html"
           onclick="logout()"
-          class="list-group-item list-group-item-action "
+          class="list-group-item list-group-item-action text-primary"
           >Sair</a
         >
-        <div class="form-group text-center mt-3">
-          <button id="theme-toggle" class="btn btn-primary" onclick="toggleTheme()">Alternar Tema</button>
-        </div>
+          <button 
+          id="theme-toggle" 
+          class="list-group-item list-group-item-action text-primary" 
+          onclick="toggleTheme()">Alternar Tema
+        </button>
       </nav>
     </div>
     <div id="page-content">
@@ -57,12 +60,18 @@
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto mt-2">
             <li class="nav-item active">
-              <a href="index.html" class="nav-link">Início</a>
+              <a href="index.html" class="nav-link text-primary">Início</a>
             </li>
+            <div class="font-controls">
+              <div class="font-control-icons">
+                <button class="btn btn-link" onclick="increaseFontSize()"><i class="fas fa-search-plus"></i></button>
+                <button class="btn btn-link" onclick="decreaseFontSize()"><i class="fas fa-search-minus"></i></button>
+              </div>
+            </div>
             <li class="nav-item dropdown">
               <a
                 id="navbarDropdown"
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle text-primary"
                 href="#"
                 role="button"
                 data-toggle="dropdown"
@@ -74,9 +83,9 @@
                 class="dropdown-menu dropdown-menu-right"
                 aria-labelledby="navbarDropdown"
               >
-                <a href="profile.html" class="dropdown-item">Perfil</a>
+                <a href="profile.html" class="dropdown-item text-primary">Perfil</a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item" onclick="logout()">Sair</a>
+                <a href="#" class="dropdown-item text-primary" onclick="logout()">Sair</a>
               </div>
             </li>
           </ul>
@@ -207,9 +216,9 @@
                 <li><strong>Plataforma intuitiva</strong> que permite visualizar relatórios de uso por dia, mês ou ano e
                   pesquisar usando diversos critérios de filtro.</li>
               </ul>
-              <h3class="pt-5"><strong>Quem Usa?</strong></h3>
+              <h3 class="pt-5"><strong>Quem Usa?</strong></h3>
               <div class="row pt-3 ">                
-                <div class="col-md-2 ml-auto">
+                <div class="col-md-2">
                   <table>
                     <tr>
                       <td>
@@ -228,7 +237,7 @@
                     </tr>
                   </table>
                 </div>
-                <div class="col-md-2  ml-auto">
+                <div class="col-md-2  ml-4">
                   <table>
                     <tr>
                       <td>
@@ -247,7 +256,7 @@
                     </tr>
                   </table>
                 </div>
-                <div class="col-md-2  ml-auto">
+                <div class="col-md-2  ml-4">
                   <table>
                     <tr>
                       <td>
@@ -266,7 +275,7 @@
                     </tr>
                   </table>
                 </div>
-                <div class="col-md-2 ml-auto">
+                <div class="col-md-2 ml-4">
                   <table>
                     <tr>
                       <td>
@@ -286,7 +295,7 @@
                     </tr>
                   </table>
                 </div>
-                <div class="col-md-2 ml-auto">
+                <div class="col-md-2 ml-4">
                   <table>
                     <tr>
                       <td>

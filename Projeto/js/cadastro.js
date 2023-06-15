@@ -15,7 +15,20 @@ function registerUser() {
     var houseNumber = document.getElementById('house-number').value;
 
     // Verificar se todos os campos foram preenchidos
-    if (!name || !login || !email || !password || !confirmPassword || !birthDate || !cpf || !gender || !motherName || !cellphone || !phone || !cep || !address || !houseNumber) {
+    if (!name || 
+      !login || 
+      !email || 
+      !password || 
+      !confirmPassword || 
+      !birthDate || 
+      !cpf || 
+      !gender || 
+      !motherName || 
+      !cellphone || 
+      !phone || 
+      !cep || 
+      !address || 
+      !houseNumber) {
       swal.fire({
         icon: "error",
         title: "Oops...",
