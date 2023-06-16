@@ -97,3 +97,42 @@ function signUp(email, password) {
 function logout() {
   firebase.auth().signOut()
 }
+
+function esqueceuSenha() {
+  Swal.fire({
+    title: 'Esqueceu sua senha?',
+    text: 'Insira seu endereço de e-mail:',
+    input: 'email',
+    showCancelButton: true,
+    confirmButtonText: 'Enviar',
+    cancelButtonText: 'Cancelar',
+    showLoaderOnConfirm: true,
+    preConfirm: (email) => {
+      return new Promise((resolve, reject) => {
+        firebase
+          .auth()
+          .sendPasswordResetEmail(email)
+          .then(() => {
+            resolve();
+          })
+          .catch((error) => {
+            reject(error.message);
+          });
+      });
+    },
+  })
+    .then((result) => {
+      if (result.value) {
+        Swal.fire({
+          title: 'Enviado!',
+          text: 'Um e-mail de recuperação de senha foi enviado para o endereço fornecido.',
+          icon: 'success',
+        });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelado', 'O processo de recuperação de senha foi cancelado.', 'error');
+      }
+    })
+    .catch((error) => {
+      Swal.fire('Erro!', error, 'error');
+    });
+}
