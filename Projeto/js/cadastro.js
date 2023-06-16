@@ -75,7 +75,7 @@ function registerUser() {
             text: "Usuário cadastrado com sucesso!",
           })
           .then(() => {
-            // Redirecionar para a página de perfil
+            // Redirecionar para a página de login
             window.location.href = "login.html";
           });
         })

@@ -52,3 +52,41 @@ function updateFontSize() {
   document.body.className = fontClasses[currentFontSize];
 }
 
+$(document).ready(function() {
+  // Adiciona o evento de clique aos links de navegação que apontam para as seções
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top
+      }, 1000); // Velocidade da rolagem em milissegundos
+    }
+  });
+});
+    //Script para voltar ao topo da página
+    window.addEventListener('scroll', function() {
+      var backToTopButton = document.getElementById('back-to-top');
+      if (window.pageYOffset > 100) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+    
+    document.getElementById('back-to-top').addEventListener('click', function(e) {
+      e.preventDefault();
+      scrollToTop(1000);
+    });
+    
+    function scrollToTop(scrollDuration) {
+      var scrollStep = -window.scrollY / (scrollDuration / 15);
+      var scrollInterval = setInterval(function() {
+        if (window.scrollY !== 0) {
+          window.scrollBy(0, scrollStep);
+        } else {
+          clearInterval(scrollInterval);
+        }
+      }, 15);
+    }
+    

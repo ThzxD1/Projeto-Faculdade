@@ -1,3 +1,4 @@
+// Fução para a autenticação do usuário
 function login() {
   if (firebase.auth().currentUser) {
     firebase.auth().signOut()
@@ -97,7 +98,7 @@ function signUp(email, password) {
 function logout() {
   firebase.auth().signOut()
 }
-
+//Função para recuperar a senha
 function esqueceuSenha() {
   Swal.fire({
     title: 'Esqueceu sua senha?',

@@ -470,7 +470,8 @@
       </div>
     </div>
   </footer>
-  <div id="scrollToTopArrow"></div>
+
+  <a href="#" id="back-to-top" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
 
   <script
     src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -498,36 +499,6 @@
   <script src="./js/auth.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/darkmode.js"></script>
-  <script>
-    //Script para voltar ao topo da página
-    window.addEventListener('scroll', function () {
-      var scrollToTopArrow = document.getElementById('scrollToTopArrow');
-      if (window.scrollY > 300) {
-        scrollToTopArrow.style.display = 'block';
-      } else {
-        scrollToTopArrow.style.display = 'none';
-      }
-    });
 
-    document.getElementById('scrollToTopArrow').addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    var prevScrollpos = window.pageYOffset;
-  </script> 
-  <script>
-    $(document).ready(function() {
-      // Adiciona o evento de clique aos links de navegação que apontam para as seções
-      $('a[href^="#"]').on('click', function(event) {
-        var target = $(this.getAttribute('href'));
-        if (target.length) {
-          event.preventDefault();
-          $('html, body').stop().animate({
-            scrollTop: target.offset().top
-          }, 1000); // Velocidade da rolagem em milissegundos
-        }
-      });
-    });
-  </script>
-  
 </body>
 </html>
