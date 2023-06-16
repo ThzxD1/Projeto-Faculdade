@@ -17,6 +17,18 @@ body {
   width: 90px;
   height: 90px;
 }
+.img-size1 img{
+  width: 180%;
+  height: 50%;
+}
+.img-size2 img{
+  width: 120%;
+  height: 50%;
+}
+.img-size3 img{
+  width: 120%;
+  height: 50%;
+}
 .column-spacing {
   margin-right: 1px;
 }
@@ -113,4 +125,31 @@ section .card{
 
 .font-size-xxlarge {
   font-size: 130%;
+}
+.footer {
+  background-color: whitesmoke;
+  color: #000;
+}
+.footer-logo {
+  max-width: 150px;
+}
+
+.footer-info {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.footer-social-link {
+  color: #000;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.footer-social i {
+  font-size: 24px; /* Altere o valor para ajustar o tamanho do ícone */
 }

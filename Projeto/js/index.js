@@ -2,6 +2,7 @@ const db = firebase.firestore()
 let tasks = []
 let currentUser = {}
 
+//Pegar o Nome do Usuário no banco de dados
 function getUser() {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -26,7 +27,7 @@ function getUser() {
 window.onload = function () {
   getUser()
 }
-
+//Aumentar e Diminuir a fonte
 var currentFontSize = 0;
 
 function increaseFontSize() {
@@ -50,3 +51,4 @@ function updateFontSize() {
 
   document.body.className = fontClasses[currentFontSize];
 }
+

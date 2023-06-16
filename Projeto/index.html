@@ -17,75 +17,44 @@
 </head>
 <body>
   <div id="page" class="d-flex">
-    <div id="sidebar" class="bg-light border-right fixed-top">
-      <header class="list-group list-group-flush">CPaaS</header>
-      <nav id="navb" class="list-group list-group-flush">
-        <a
-          href="index.html"
-          class="list-group-item list-group-item-action text-primary"
-          >Início</a
-        >
-        <a
-          href="profile.html"
-          class="list-group-item list-group-item-action text-primary"
-          >Perfil</a
-        >
-        <a
-          href="login.html"
-          onclick="logout()"
-          class="list-group-item list-group-item-action text-primary"
-          >Sair</a
-        >
-        <a class="list-group-item list-group-item-action text-primary" 
-        href="#section1link1"
-        >Link 1</a>
-        <a class="list-group-item list-group-item-action text-primary" 
-        href="#section1link2"
-        >Link 2</a>
-        <a class="list-group-item list-group-item-action text-primary" 
-        href="#section1link3"
-        >Link 3</a>
-        <a class="list-group-item list-group-item-action text-primary" 
-        href="#section1link4"
-        >Link 4</a>
-        <a class="list-group-item list-group-item-action text-primary" 
-        href="#section1link5"
-        >Link 5</a>
-        <a class="list-group-item list-group-item-action text-primary" 
-        href="#section1link6"
-        >Link 6</a>
-          <button 
-          id="theme-toggle" 
-          class="list-group-item list-group-item-action text-primary" 
-          onclick="toggleTheme()">Alternar Tema
-        </button>
-      </nav>
-    </div>
     <div id="page-content">
       <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <button id="sidebar-toggle" class="btn btn-primary">Menu</button>
+        <img src="./images/logo.svg" class="img-fluid">    
         <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>    
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto mt-2">
             <li class="nav-item active">
               <a href="index.html" class="nav-link text-primary">Início</a>
             </li>
+            <a class="nav-link text-primary" 
+        href="#section1link1"
+        >Usos</a>
+        <a class="nav-link text-primary" 
+        href="#section1link2"
+        >Soluções</a>        
             <div class="font-controls">
               <div class="font-control-icons">
                 <button class="btn btn-link" onclick="increaseFontSize()"><i class="fas fa-search-plus"></i></button>
                 <button class="btn btn-link" onclick="decreaseFontSize()"><i class="fas fa-search-minus"></i></button>
               </div>
             </div>
+            <li class="nav-item active">
+              <button 
+              id="theme-toggle" 
+              class="btn btn-link text-primary" 
+              onclick="toggleTheme()">Alternar Tema
+              </button>
+              </li>
             <li class="nav-item dropdown">
               <a
                 id="navbarDropdown"
@@ -110,62 +79,75 @@
         </div>
       </nav>
 
-      <div class="container-fluid">
-        <h1 class="mt-4 text-center p-5"><img src="./images/a.png"></h1>
-        <div class="row">
-          <section class="text-center" style="min-width: 100px; max-width: 600px; margin: 0 auto;">
-            <h2>CPaaS: O que é?</h2>
-            <h3 id="section1link1">Communications Platform as a Service</h3>
-              <h4>Plataforma de Comunicação como Serviço</h4>
-              <p class="text-left">É uma solução de software de comunicação que atua
-                como uma base sobre a qual desenvolvedores podem
-                integrar uma variedade de aplicativos.
-                Métodos de comunicação típicos, como voz, chamadas
-                de vídeo ou mensagens de texto SMS, podem ser
-                incorporados em outros sistemas por meio de APIs que
-                se conectam à plataforma CPaaS.
-                Essas APIs permitem que as empresas expandam suas
-                ofertas sem a necessidade de hardware ou software
-                adicional.
-                Communications</p>
-            <section id="section1" class="text-center" style="max-width: 600px; margin: 0 auto; margin-top: 10%;">
-              <h3 id="section1link1">CPaaS e a Transformação Digital</h3>
+      <div class="container-fluid pt-5 mt-5">
+        <table class="mx-auto">
+          <tr>
+            <td>
+              <div id="text-h" class="col py-3 px-lg-5 pt-3 mt-3 ml-5">
+                <h1><strong>Bem-vindo a <img src="./images/modavo.png"></strong></h1>
+                <h2 class="text-primary"><strong>CPaaS Plataform</strong></h2>
+                <h3 class="text-primary"><strong>CPaaS: O que é?</strong></h3>
+                <p>É uma solução de software de comunicação que atua como uma base sobre a 
+                qual desenvolvedores podem integrar uma variedade de aplicativos. 
+                Métodos de comunicação típicos, como voz, chamadas de vídeo ou mensagens de texto SMS.</p>
+                <h1 class="text-primary"><strong>Como funciona ?</strong></h1>
+                <p>
+                  Nossa API permitem que as empresas expandam 
+                  suas ofertas sem a necessidade de hardware ou software adicional.
+                </p>
+              </div>
+            </td>
+            <td>
+              <div class="col py-3 px-lg-5"><img src="./images/api-removebg-preview.png"></div>
+            </td>
+          </tr>
+        </table>
+        <table class="mx-auto">
+          <tr>
+            <td>
+              <div class="col py-3 px-lg-5"><img style="width: 110%;" src="./images/telecall-cpaas-home-min.png"></div>
+            </td>
+            <td>
+              <div id="text-h" class="col py-3 px-lg-5">
+                <h2 id="section1link1" class="text-primary ">CPaaS e a Transformação Digital</h2>
               <p class="text-left">
                 O CPaaS, com sua escalabilidade, flexibilidade, autenticação e segurança aprimoradas, está revolucionando o modo como as empresas habilitadas em nuvem implementam comunicações de voz, SMS e vídeo.
-              </p>
-              <p class="text-left">
-                85% dos profissionais se conectam de maneira diferente com colegas e clientes do que faziam há apenas 5 anos. As receitas de CPaaS estão crescendo mais de 40% ao ano. CPaaS já ultrapassou o mercado de UCaaS (Unified Communication as a Service). Expectativa de crescimento estimado de $8,2 bilhões em 2021.
-              </p>
+              </p>              
               <p class="text-left">
                 Marcas que estão em múltiplos canais melhoram a experiência do usuário e aumentam seus resultados.
               </p>
-            </section>
-            <section id="section2">
-              <h3 id="section1link2">Usos</h3>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="row">
+          <section class="" style="min-width: 100px; max-width: 800px; margin: 0 auto;">
+            <section id="section1link1">
+              <h3 >Usos</h3>
               <div class="row">
                 <div class="col-sm-6 col-md-3">
-                  <img src="./images/logistics.png" alt="Logística" class="img-header img-size p-3">
+                  <img src="./images/logistics.png" alt="Logística" class="img-header  p-3">
                   <h4>Logística</h4>
                   <p class="text-left">Acesso seguro com 2FA.</p>
                   <p class="text-left">Uso de números mascarados para proteção de funcionário e cliente.</p>
                   <p class="text-left">Mantenha o cliente informado sobre entrega e serviços. Verified calling para confirmação de entregas.</p>
                 </div>
                 <div class="col-sm-6 col-md-3">
-                  <img src="./images/shopping-cart1.png" alt="Varejo" class="img-header img-size p-3">
+                  <img src="./images/shopping-cart1.png" alt="Varejo" class="img-header p-3">
                   <h4>Varejo</h4>
                   <p class="text-left">Compra segura com 2FA.</p>
                   <p class="text-left">Avisos sobre compras e entregas.</p>
                   <p class="text-left">Upsell com novas ofertas e vantagens via SMS ou Verified Calling.</p>
                 </div>
                 <div class="col-sm-6 col-md-3">
-                  <img src="./images/image10.png" alt="Call Center" class="img-header img-size p-3">
+                  <img src="./images/image10.png" alt="Call Center" class="img-headerp-3">
                   <h4>Call Center</h4>
                   <p class="text-left">Melhore taxas de abertura utilizando alertas SMS para confirmações.</p>
                   <p class="text-left">Economia de números com o uso de um único número máscara por todos os agentes.</p>
                   <p class="text-left">Verified Calling para confirmação de agendamentos.</p>
                 </div>
                 <div class="col-sm-6 col-md-3">
-                  <img src="./images/heart1.png" alt="Saúde" class="img-header img-size p-3">
+                  <img src="./images/heart1.png" alt="Saúde" class="img-header p-3">
                   <h4>Saúde</h4>
                   <p class="text-left ">Acesso seguro com 2FA.</p>
                   <p class="text-left">Melhore o agendamento e reduza faltas com lembretes por SMS.</p>
@@ -174,150 +156,126 @@
                 </div>
               </div>
             </section>
-            <section class="pt-5" id="section3">
-              <h3 id="section1link3">Soluções</h3>
+            <section id="section1link2" class="pt-5" id="section3">
+              <h3 class="pt-5">Soluções</h3>
               <div class="row">
                 <div class="col-md-3 pt-3">
-                  <a href="#section1link4"><img class="img-size pt-2" src="./images/padlock.png" alt="2FA"></a>
+                  <a href="#section1link3"><img class="img-size pt-2" src="./images/padlock.png" alt="2FA"></a>
                   <p class="text-center p-4">2FA</p>
                 </div>
                 <div class="col-md-3 pt-3">
-                <a href="#section1link5"><img class="img-size pt-2" src="./images/smartphone.png" alt="Número Máscara"></a>
+                <a href="#section1link4"><img class="img-size pt-2" src="./images/smartphone.png" alt="Número Máscara"></a>
                   <p class="text-center p-2">Número Máscara</p>
                 </div>
                 <div class="col-md-3 pt-3">
-                  <a><img class="img-size pt-2" src="./images/check.png" alt="Google Verified Calls"></a>
+                  <a href="#section1link5"><img class="img-size pt-2" src="./images/check.png" alt="Google Verified Calls"></a>
                   <p class="text-center p-2">Google Verified Calls</p>
                 </div>
                 <div class="col-md-3 pt-3">
-                <a><img class="img-size pt-2" src="./images/sms.png" alt="SMS Programável"></a>
+                <a href="#section1link6"><img class="img-size pt-2" src="./images/sms.png" alt="SMS Programável"></a>
                   <p class="text-center p-2" >SMS Programável</p>
-                </div>
+                </div>                
               </div>
+              <h5 class="text-center">Clique nas imagens para saber mais sobre cada solução.</h5>
             </section>
-            <section id="section4">
+            <section id="section1link3">
               <img class="pt-5" src="./images/padlock.png" alt="2FA">
-              <h3 id="section1link4" class="pt-2 pb-3">2FA</h3>
+              <h3 class="pt-2 pb-3">2FA</h3>
               <p class="text-left">O 2FA é um procedimento de segurança que garante que serão necessários 2 fatores únicos para liberação de uma ação. O primeiro fator é a senha que o usuário e o segundo pode ser autenticado via token, via detecção de impressão digital, reconhecimento facial, código enviado via SMS, entre outros.</p>
-              <h4 class="text-left pt-5">O 2FA permite que você:</h4>
-              <ul class="text-left" style="list-style:disc">
-                <li><strong>Envie</strong> uma senha via SMS, voz ou e-mail para autenticação do usuário.</li>
-                <li><strong>Adicione</strong> uma camada extra de segurança além da senha pessoal.</li>
-                <li><strong>Ofereça</strong> maior segurança para usuários.</li>
-                <li>Ofereça <strong>segurança aprimorada</strong> para seus clientes.</li>
-                <li>Reduza casos de fraude e invasões e evite o acesso a dados por invasores.</li>
-                <li>Envio de OTP por meio de <strong>vários canais</strong>, incluindo SMS, voz ou e-mail.</li>
-                <li><strong>Flexibilidade</strong> de canais garante que o usuário conseguirá completar a tarefa desejada
-                  mesmo quando tiver problema com um deles. Exemplo: Enviar OTP por SMS, em caso de
-                  falha, enviar OTP por chamada de voz, em caso de outra falha, enviar por e-mail.</li>
-                <li>API simples e de <strong>rápida implementação.</strong></li>
-                <li><strong>Plataforma intuitiva</strong> que permite visualizar relatórios de uso por dia, mês ou ano e
-                  pesquisar usando diversos critérios de filtro.</li>
-              </ul>
+              <h3 class="text-left text-primary pt-5">Benefícios da Autenticação de 2 Fatores:</h3>
+              <div class="row pt-3">
+                <div class="col-lg-6">
+                  <div class="col py-3 px-lg-5">
+                    <img src="./images/2fa-steps.png" class="img-fluid" alt="Passos de autenticação em duas etapas">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="col py-3 px-lg-5">
+                    <ul class="text-left" style="list-style-type: none;">
+                      <li><i class="fas fa-check mr-2"></i> Ofereça segurança aprimorada para seus clientes.</li>
+                      <li><i class="fas fa-check mr-2"></i> Reduza casos de fraude e invasões e evite o acesso a dados por invasores.</li>
+                      <li><i class="fas fa-check mr-2"></i> Envio de OTP por meio de vários canais, incluindo SMS, voz ou e-mail.</li>
+                    </ul> 
+                  </div>
+                </div>
+              </div>
+              
+
               <h3 class="pt-5"><strong>Quem Usa?</strong></h3>
-              <div class="row pt-3 ">                
-                <div class="col-xl-2">
-                  <table>
-                    <tr>
-                      <td>
-                        <img src="./images/stats.png" alt="Finanças" >
-                      </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td>
-                        <h4>Finanças</h4>
-                        <p>Acesso ao portal/app</p>
-                        <p>Autenticação para transações bancárias</p>
-                        <p>Pagamentos Online (PicPay, PayPal)</p>
-                        <p>Digital Wallets (Google Pay, Apple Pay, Samsung Pay)</p>
-                        <p><img  src="./images/bradesco.png"></p>
-                      </td>
-                    </tr>
-                  </table>
+              <div class="row pt-3">
+                <div class="col-md-2">
+                  <img src="./images/stats.png" alt="Finanças">
+                  <h4>Finanças</h4>
+                  <p>Acesso ao portal/app</p>
+                  <p>Autenticação para transações bancárias</p>
+                  <p>Pagamentos Online (PicPay, PayPal)</p>
+                  <p>Digital Wallets (Google Pay, Apple Pay, Samsung Pay)</p>
+                  <img src="./images/bradesco.png">
                 </div>
-                <div class="col-xl-2  ml-4">
-                  <table>
-                    <tr>
-                      <td>
-                        <img src="./images/heart1.png" alt="Saúde" >
-                      </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td>
-                        <h4>Saúde</h4>
-                        <p>Acesso ao portal/app</p>
-                        <p>Agendamentos</p>
-                        <p>Tokens de autorização</p>
-                        <p>Telemedicina</p>
-                        <p><img  src="./images/amil.png"></p>
-                      </td>
-                    </tr>
-                  </table>
+                <div class="col-md-2 ml-4">
+                  <img src="./images/heart1.png" alt="Saúde">
+                  <h4>Saúde</h4>
+                  <p>Acesso ao portal/app</p>
+                  <p>Agendamentos</p>
+                  <p>Tokens de autorização</p>
+                  <p>Telemedicina</p>
+                  <img src="./images/amil.png">
                 </div>
-                <div class="col-xl-2  ml-4">
-                  <table>
-                    <tr>
-                      <td>
-                        <img src="./images/bank.png" alt="Governo" >
-                      </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td>
-                        <h4>Governo</h4>
-                        <p>Acesso ao portal/app</p>
-                        <p>Gestão de informações</p>
-                        <p>Agendamentos</p>
-                        <p>Recuperação de Senha</p>
-                        <p><img  src="./images/governo.png"></p>
-                      </td>
-                    </tr>
-                  </table>
+                <div class="col-md-2 ml-4">
+                  <img src="./images/bank.png" alt="Governo">
+                  <h4>Governo</h4>
+                  <p>Acesso ao portal/app</p>
+                  <p>Gestão de informações</p>
+                  <p>Agendamentos</p>
+                  <p>Recuperação de Senha</p>
+                  <img src="./images/governo.png">
                 </div>
-                <div class="col-xl-2 ml-4">
-                  <table>
-                    <tr>
-                      <td>
-                        <img src="./images/shopping-cart1.png" alt="Varejo" >
-                      </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td>
-                        <h4>Varejo</h4>
-                        <p>Acesso ao portal/app</p>
-                        <p>Salvar dados de pagamentos</p>
-                        <p>Acesso ao histórico</p>
-                        <p>Recuperação de Senha</p>
-                        <p>Recibo Eletrônico</p>
-                        <p><img  src="./images/varejo.png"></p>
-                      </td>
-                    </tr>
-                  </table>
+                <div class="col-md-2 ml-4">
+                  <img src="./images/shopping-cart1.png" alt="Varejo">
+                  <h4>Varejo</h4>
+                  <p>Acesso ao portal/app</p>
+                  <p>Salvar dados de pagamentos</p>
+                  <p>Acesso ao histórico</p>
+                  <p>Recuperação de Senha</p>
+                  <p>Recibo Eletrônico</p>
+                  <img src="./images/varejo.png">
                 </div>
-                <div class="col-xl-2 ml-4">
-                  <table>
-                    <tr>
-                      <td>
-                        <img src="./images/plane.png" alt="Turismo" >
-                      </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td>
-                        <h4>Turismo</h4>
-                        <p>Acesso ao portal/app</p>
-                        <p>Gestão de Reservas</p>
-                        <p>Acesso ao histórico</p>
-                        <p>Salvar dados de pagamentos</p>
-                        <p>Recuperação de Senha</p>
-                        <p><img  src="./images/turismo.png"></p>
-                      </td>
-                    </tr>
-                  </table>
+                <div class="col-md-2 ml-4">
+                  <img src="./images/plane.png" alt="Turismo">
+                  <h4>Turismo</h4>
+                  <p>Acesso ao portal/app</p>
+                  <p>Gestão de Reservas</p>
+                  <p>Acesso ao histórico</p>
+                  <p>Salvar dados de pagamentos</p>
+                  <p>Recuperação de Senha</p>
+                  <img src="./images/turismo.png">
                 </div>
               </div>
             </section>
-            <section id="section5" class="pt-5">
+            <section id="section1link4" class="pt-5">
               <img class="pt-2" src="./images/smartphone.png" alt="Número Máscara">
-              <h3 id="section1link5" class="pt-3"><strong>Número Máscara</strong></h3>
+              <h3 class="pt-3"><strong>Número Máscara</strong></h3>
+              <h3 class="pt-5 text-primary"><strong>Como funciona ?</strong></h3>
+              <div class="row align-items-center">
+                <div class="col pt-4">
+                  <h4>Usuário faz uma chamada através de um aplicativo.</h4>
+                  <img src="./images/number_masking1.png" alt="number_masking1">
+                  <p>Ex.: O usuário liga para o entregador ou motorista de táxi ou entra em contato com a central de atendimento.</p>
+                </div>
+              
+                <div class="col pt-4">
+                  <h4>Plataforma mascara o número original.</h4>
+                  <img src="./images/number_masking2.png" alt="number_masking2">
+                  <p>Ex.: A plataforma recebe a chamada e mascara o número antes de conectar o destinatário.</p>
+                </div>
+              
+                <div class="col pt-4">
+                  <h4>Ambas as partes são conectadas</h4>
+                  <img src="./images/number_masking3.png" alt="number_masking3">
+                  <p>Ex.: A plataforma conecta ambas as partes mantendo a privacidade de ambos.</p>
+                </div>
+              </div>
+              
               <h5 class="text-left pt-3"><strong>Proteja identidades profissionais</strong></h5>
               <p class="text-left">Garanta aos seus clientes a capacidade de fazer chamadas e enviar mensagens sem expor seus números de telefone pessoais.</p>
               <ul class="text-left" style="list-style:disc">
@@ -362,26 +320,154 @@
                     <p><img class="" src="./images/ifood.png"></p>
                 </div>
               </div>
-              <h3 class="pt-4"><strong>Recursos Avançados</strong></h3>
-              <ul class="text-left" style="list-style: disc;">
-                <li>SMS – Número máscara é totalmente funcional para chamadas de voz e SMS.</li>
-                <li>Geo Match – Combine o código do país do número mascarado com o da chamada de origem passando pro cliente a impressão de que vocês estão na mesma região.</li>
-                <li>Gestão de Sessões – Habilite números máscara permanentes, bloqueie chamadas indesejadas, validade de sessão e etc.</li>
-                <li>Relatórios – Acesso direto do cliente à relatórios detalhados.</li>
-                <li>Números Simultâneos - Use o mesmo número máscara em várias ligações simultâneas.</li>
-                <li>Triagem de Conteúdo – Recurso SMS onde você pode sinalizar conteúdos sensíveis para proteger dados do cliente.</li>
-                <li>Escalabilidade Ilimitada – compre e adicione números conforme necessário.</li>
-              </ul>
+              
             </section>
-            <section id="section6">
-              <h3 id="section1link6">Link 6</h3>
-              <p>Informações sobre o CPaaS - Link 6</p>
+            <section id="section1link5">
+              <img class="pt-2" src="./images/check.png" alt="Google Verified Calls">
+              <h3 class="pt-3"><strong>Google Verified Calls</strong></h3>
+              <h3 class="text-primary pt-5">Como funciona ?</h3>
+              <div class="row pt-3">
+                <div class="col-lg-6">                  
+                  <div class="col py-3 px-lg-5">                    
+                    <h5>Chamadas verificadas.</h5>
+                    <ul class="text-left" style="list-style-type: none;">
+                      <li><i class="fas fa-check mr-2"></i> Esse novo recurso do Google, exclusivo para
+                        telefones Android, permite que empresas exibam
+                        para o cliente na hora da chamada sua marca,
+                        logotipo e até mesmo o motivo da chamada.</li>
+                      <li><i class="fas fa-check mr-2"></i>A Telecall é a primeira operadora de telecom no
+                        Brasil a oferecer esse recurso do Google.</li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="col py-3 px-lg-5">
+                    <h5>Compatibilidade</h5>
+                    <ul class="text-left" style="list-style-type: none;">
+                    <li><i class="fas fa-check mr-2"></i> Esse novo recurso do Google, exclusivo para
+                      telefones Android, permite que empresas exibam
+                      para o cliente na hora da chamada sua marca,
+                      logotipo e até mesmo o motivo da chamada.</li>
+                    <li><i class="fas fa-check mr-2"></i>A Telecall é a primeira operadora de telecom no
+                      Brasil a oferecer esse recurso do Google.</li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row pt-3">
+                <div class="col-lg-6">                  
+                  <div class="col py-3 px-lg-5">                    
+                    <h5>Benefícios</h5>
+                    <ul class="text-left" style="list-style-type: none;">
+                      <li><i class="fas fa-check mr-2"></i> Estabeleçe Confiança</li><p>Clientes são mais propensos a atender chamadas de organizações com os quais estão
+                        familiarizadas e com as quais já tem relação.</p>
+                      <li><i class="fas fa-check mr-2"></i>Agilize a Conexão</li><p>Quando o motivo da chamada é claro, a chance de o cliente atender é muito maior e a conexão
+                        com ele mais rápida e eficiente.</p>
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="col py-3 px-lg-5">
+                    <h5>Usos</h5>
+                    <ul class="text-left" style="list-style-type: none;">
+                    <li><i class="fas fa-check mr-2"></i> Aviso de problemas de fraude de cartão de crédito.</li>
+                    <li><i class="fas fa-check mr-2"></i>Aviso de atrasos e cancelamentos de voos.</li>
+                    <li><i class="fas fa-check mr-2"></i>Agendamentos de serviços, entregas, reparos e
+                      instalações.</li>
+                      <li><i class="fas fa-check mr-2"></i>Avisos sobre agendamentos, exames e resultados.</li>
+                    <li><i class="fas fa-check mr-2"></i>Oferecer uma melhor experiência de vendas e
+                      promoções.</li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+
             </section>
+            <section id="section1link6">
+              <img class="pt-2" src="./images/sms.png" alt="SMS Programável">
+              <h3 class="pt-3"><strong>SMS Programável</strong></h3>
+              <h3 class="text-primary pt-5">Como funciona ?</h3>
+              <div class="row pt-3">
+                <div class="col-lg-6">                  
+                  <div class="col py-3 px-lg-5">                    
+                    <img src="./images/hand.png" class="img-fluid" alt="SMS Recebido">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="col py-3 px-lg-5">
+                    <h3 class="text-primary">O que é?</h3>
+                    <h4>Conecte-se com seus clientes.</h4>
+                    <p class="text-left">É muito provável que você já tenha recebido uma
+                      mensagem de texto de uma empresa ou organização.
+                      Com uma API, qualquer empresa pode enviar mensagens
+                      de texto e impactar clientes, prospects ou fornecedores
+                      como parte de seu processo comercial.
+                      Com essa ferramenta você envia mensagens de SMS com
+                      as informações que o seu cliente precisa e com a
+                      segurança, a velocidade e a confiabilidade que você
+                      espera.</p>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="row pt-3">
+                <div class="col-lg-6">                  
+                  <div class="col py-3 px-lg-5">                    
+                    <h5>Benefícios</h5>
+                    <ul class="text-left" style="list-style-type: none;">
+                      <li><i class="fas fa-check mr-2"></i>Comunicação rápida, efetiva e escalável.</li>
+                      <li><i class="fas fa-check mr-2"></i>Baixo custo.</li>
+                      <li><i class="fas fa-check mr-2"></i>Alta taxa de entrega e leitura.</li>
+                      <li><i class="fas fa-check mr-2"></i>Personalização de data, hora e conteúdo.</li>
+                      <li><i class="fas fa-check mr-2"></i>Agendamento de campanhas.</li>
+                      <li><i class="fas fa-check mr-2"></i>Plataforma user-friendly.</li>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="col py-3 px-lg-5">                    
+                    <img src="./images/sms2.png" class="img-fluid" alt="Envio SMS">
+                    </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <h3 class="h1 text-primary">Jornada do Cliente</h3>
+                <div class="col-lg-12">
+                  <div class="col py-3 px-lg-5 text-center">
+                    <img src="./images/client.png" class="img-fluid" alt="SMS Recebido">
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <p class="h1 text-primary">Quem utiliza CPaaS?</p>
+                <div class="col-lg-12">
+                  <div class="col py-3 px-lg-5 text-center">
+                    <img src="./images/util.png" class="img-fluid" alt="SMS Recebido">
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
         </div>
       </div>
     </div>
   </div>
-
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="./images/telecall.png" alt="Logo" class="footer-logo">
+          <p>&copy; 2023 Telecall. Todos os direitos reservados.</p>
+        </div>
+        <div class="col-lg-6 text-lg-right">
+          <div class="footer-social">
+            <a href="https://www.facebook.com/TelecallBr" class="footer-social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/telecallbr/" class="footer-social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/telecall/" class="footer-social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <div id="scrollToTopArrow"></div>
 
   <script
@@ -389,6 +475,8 @@
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"
   ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <script
     src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
@@ -409,6 +497,7 @@
   <script src="./js/index.js"></script>
   <script src="./js/darkmode.js"></script>
   <script>
+    //Script para voltar ao topo da página
     window.addEventListener('scroll', function () {
       var scrollToTopArrow = document.getElementById('scrollToTopArrow');
       if (window.scrollY > 300) {
@@ -422,6 +511,20 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
     var prevScrollpos = window.pageYOffset;
+  </script> 
+  <script>
+    $(document).ready(function() {
+      // Adiciona o evento de clique aos links de navegação que apontam para as seções
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top
+          }, 1000); // Velocidade da rolagem em milissegundos
+        }
+      });
+    });
   </script>
   
 </body>
