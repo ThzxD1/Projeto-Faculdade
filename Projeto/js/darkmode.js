@@ -1,7 +1,3 @@
-$("#sidebar-toggle").click(function (e) {
-  e.preventDefault()
-  $("#page").toggleClass("toggled")
-})
 // mudar para dark/light mode
 function toggleTheme() {
   const body = document.querySelector("body");
