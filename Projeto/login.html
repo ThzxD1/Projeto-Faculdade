@@ -18,13 +18,24 @@
 <body class="bg-light d-flex p-5 align-items-center">
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a href="index.html"><img src="./images/logo.svg" class="img-fluid"></a>  
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button> 
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto mt-2">
         <li class="nav-item active">
-          <a href="index.html" class="nav-link">Início</a>
+          <a href="index.html" class="nav-link text-primary">Início</a>
         </li>
         <li class="nav-item active">
-          <a href="cadastro.html" class="nav-link">Cadastro</a>
+          <a href="cadastro.html" class="nav-link text-primary">Cadastro</a>
         </li>
       </ul>
     </div>
@@ -47,7 +58,7 @@
                 <input type="password" name="password" id="password" placeholder="Senha" class="form-control" /> 
               </div>
               <div class="text-center">
-                <button type="button" class="btn btn-outline-primary" onclick="login()">Entrar</button>
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="login()">Entrar</button>
               </div>
               <div class="text-left">
               <a href="cadastro.html">Ainda não tem cadastro? Clique aqui.</a>
