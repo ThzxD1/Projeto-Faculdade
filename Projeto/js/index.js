@@ -89,4 +89,7 @@ $(document).ready(function() {
         }
       }, 15);
     }
-    
+    function logout() {
+      firebase.auth().signOut()
+      window.location.replace('index.html')
+    }
