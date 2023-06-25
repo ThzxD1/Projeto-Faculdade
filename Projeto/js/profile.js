@@ -1,29 +1,29 @@
-const db = firebase.firestore()
-let currentUser = {}
-let profile = false
+const db = firebase.firestore(); // Obtém uma referência para o Firestore do Firebase
+let currentUser = {}; // Armazena informações do usuário atualmente logado
+let profile = false; // Indica se o perfil do usuário está registrado
 
+// Obtém o usuário atualmente logado no Firebase
 function getUser() {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      currentUser.uid = user.uid
-      getUserInfo(user.uid)
-      let userLabel = document.getElementById("navbarDropdown")
-      userLabel.innerHTML = user.email
+      currentUser.uid = user.uid;
+      getUserInfo(user.uid);
+      let userLabel = document.getElementById("navbarDropdown");
+      userLabel.innerHTML = user.email;
     } else {
-      swal
-        .fire({
-          icon: "success",
-          title: "Redirecionando para a tela de autenticação",
-        })
-        .then(() => {
-          setTimeout(() => {
-            window.location.replace("login.html")
-          }, 1000)
-        })
+      swal.fire({
+        icon: "success",
+        title: "Redirecionando para a tela de autenticação",
+      }).then(() => {
+        setTimeout(() => {
+          window.location.replace("login.html");
+        }, 1000);
+      });
     }
-  })
+  });
 }
 
+// Obtém informações do usuário do banco de dados
 async function getUserInfo(uid) {
   const logUsers = await db.collection("users").doc(uid).get();
   let userInfo = document.getElementById("userInfo");
@@ -32,7 +32,7 @@ async function getUserInfo(uid) {
   } else {
     userInfo.innerHTML = "Perfil registrado";
     const userData = logUsers.data();
-    let userLabel = document.getElementById("navbarDropdown")
+    let userLabel = document.getElementById("navbarDropdown");
     document.getElementById("name").value = userData.name || "";
     document.getElementById("email").value = userData.email || "";
     document.getElementById("login").value = userData.login || "";
@@ -45,7 +45,7 @@ async function getUserInfo(uid) {
     document.getElementById("cep").value = userData.cep || "";
     document.getElementById("address").value = userData.address || "";
     document.getElementById("house-number").value = userData.houseNumber || "";
-    userLabel.innerHTML = userData.name
+    userLabel.innerHTML = userData.name;
   }
 }
 
@@ -126,13 +126,10 @@ function saveProfile() {
     });
 }
 
-window.onload = function () {
-  getUser()
-}
+// Função para preencher o endereço com base no CEP usando a API ViaCEP
 function fillAddress() {
   const cep = document.getElementById('cep').value;
 
-  // Faz a consulta na API ViaCEP
   axios.get(`https://viacep.com.br/ws/${cep}/json/`)
     .then(response => {
       const data = response.data;
@@ -144,11 +141,10 @@ function fillAddress() {
     });
 }
 
-
 // Adiciona um listener ao campo de CEP para chamar a função fillAddress quando houver mudanças
 document.getElementById('cep').addEventListener('change', fillAddress);
 
-//Aumentar e Diminuir a fonte
+// Aumentar e diminuir o tamanho da fonte
 var currentFontSize = 0;
 
 function increaseFontSize() {
